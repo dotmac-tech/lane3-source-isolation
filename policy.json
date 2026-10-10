@@ -3,9 +3,9 @@
   "repository_id": 1406738001,
   "owner_id": 335992433,
   "default_branch": "main",
-  "baseline": "2a60382b2bdf9af53db95a4eaeea7283887759c6",
+  "baseline": "9b55131ea1e7aa7eac17536da60f8f26ea04ed3b",
   "workflows": {
-    ".github/workflows/lane3-exposure-rehearsal.yml": "8c77e59fc46d22db9377a2113774a0aba8bd7118",
+    ".github/workflows/lane3-exposure-rehearsal.yml": "61201147e7d2159a7f2d8c8497aa95819d26170a",
     ".github/workflows/source-policy.yml": "3845ed01fe73f5c6d297d6a2ce2e2a783932f9e1"
   }
 }
