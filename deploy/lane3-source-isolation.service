@@ -1,0 +1,30 @@
+[Unit]
+Description=Independent Lane3 GitHub App source check
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=/opt/lane3-source-isolation
+ExecStart=/usr/bin/python3 -I /opt/lane3-source-isolation/run_service.py
+EnvironmentFile=/etc/lane3-source-isolation/config
+LoadCredential=github-app.pem:/etc/lane3-source-isolation/github-app.pem
+Restart=on-failure
+RestartSec=30
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_INET AF_INET6
+MemoryMax=128M
+CPUQuota=20%
+LimitCORE=0
+[Install]
+WantedBy=multi-user.target
